@@ -8,7 +8,7 @@ import random
 
 def main():
     """ Initializes the connection and joins the channels listed and sets all other variables"""
-    irc = Connections("irc.zero9f9.com","#bots","mechbot",6667)
+    irc = Connections("insert server name","insert channel name","name of bot",6667)
     irc.connect()
     irc.joinchan()
     while 1:
