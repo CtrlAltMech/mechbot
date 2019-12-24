@@ -2,6 +2,4 @@
 
 mechbot is an IRC bot and was my first major project in python. He is constantly being messed with and for the most parts works pretty well.
 
-I occasionally add modules when I see a need for something.
-
-He is simply a project
+For the most part this has been abandoned. I may come back to it in the future.
