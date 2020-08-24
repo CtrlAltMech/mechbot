@@ -4,6 +4,8 @@
  - mechbot is an IRC bot and was my first major project in python and was pretty much abandoned until 8/01/2020 when I started work again.
  - For now all he does is connect and respond to his name. He is receiving a major overhaul as I have more knowledge of python now.
 
+ ![Basic function](https://i.imgur.com/XVpuDGH.png)
+
 # Requirements
  - yaml (for now)
 
