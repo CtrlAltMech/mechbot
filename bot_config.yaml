@@ -1,10 +1,10 @@
 ## Mechbot configuration file, enter all required information. ##
 
 Server:
-  - "irc.zero9f9.com"
+  - "Put Server Here" # Server address
 Channel:
-  - "#bots3,#bots2" #If joining multiple channels do not put any spaces.
+  - "Put channel/channels here seperated by commas" # If joining multiple channels do not put any spaces.
 Bot_Name:
-  - "mechbot"
+  - "mechbot" # Pick a name, any name.
 Port_Number:
-  - 6667
+  - 6667 # This is the default port, change to whatever.
