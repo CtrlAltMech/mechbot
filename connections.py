@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 ### Handles all things network connections to do with the bot, improvments to come ###
 
@@ -17,7 +17,6 @@ class Connections:
         self.channel = channel
         self.botnick = botnick
         self.port = port
-
     """Handles the connection, its very basic right now and needs a lot more error handling and other functionality"""
     def connect(self):
         self.irc.connect((self.server, self.port))

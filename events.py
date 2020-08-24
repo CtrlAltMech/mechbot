@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
-from urbdict_mod import DefinitionScraper
+#from urbdict_mod import DefinitionScraper
 import random
 import re
-from slavtime import SlavTime
+#from slavtime import SlavTime
 
 """Instantiates different modules that I will come up with"""
-ds = DefinitionScraper(r"http://www.urbandictionary.com/define.php?term=")
-st = SlavTime('Europe/Moscow')
+#ds = DefinitionScraper(r"http://www.urbandictionary.com/define.php?term=")
+#st = SlavTime('Europe/Moscow')
 
 """Will contain all modules that the bot can run and determine if/when it needs to be triggered"""
 class Events:
@@ -22,7 +22,7 @@ class Events:
         self.quit_message = []
 
     """Does all the work for the urban dictionary module, more tweaks to this will be coming next"""
-    def urbdict(self, irc_text):
+    """def urbdict(self, irc_text):
         try:
             define_word = irc_text.split('.ud ',1)[1].split()
             if define_word == []:
@@ -40,7 +40,7 @@ class Events:
             self.event_output = "you need to enter .ud [search term] to make this work...scub"
         except(UnicodeEncodeError):
             self.event_output = "Get that unicode shit out of here!"
-
+"""
     """Simply sends the quit command to mechbot with a random quit message"""
     def bot_quit(self):
         if self.name == self.admin:
@@ -63,12 +63,12 @@ class Events:
     def event_check(self):
         if self.message.find("MECHBOT".lower()) != -1:
             self.bot_responses()
-        elif self.message.find(".ud") != -1 and self.message.startswith(".ud"):
-            self.urbdict(self.irc_output)
+        #elif self.message.find(".ud") != -1 and self.message.startswith(".ud"):
+        #    self.urbdict(self.irc_output)
         elif self.message.find(".quit") != -1:
             self.bot_quit()
-        elif self.message.find(".lolrussia") != -1:
-            self.event_output = st.slavtime()
+        #elif self.message.find(".lolrussia") != -1:
+        #    self.event_output = st.slavtime()
         else:
             return False
 
