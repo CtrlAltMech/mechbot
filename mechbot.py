@@ -27,6 +27,7 @@ def main():
         ircmsg = ircmsg.strip('\n\r')
         print(ircmsg)
 
+        #TODO Events needs a major re-work so this will be getting a major change and will be split into a seperate class and file
         """Looks for user text and splits it up into all the major parts to be used elsewhere"""
         if ircmsg.find("PRIVMSG") != -1:
             name = ircmsg.split('!',1)[0][1:]

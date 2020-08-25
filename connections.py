@@ -2,6 +2,7 @@
 
 ### Handles all things network connections to do with the bot, improvments to come ###
 
+#TODO Add like any sort of fucking error handling, it bork not gracefully when everything is not perfect
 import socket
 from time import sleep
 

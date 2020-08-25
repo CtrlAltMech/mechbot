@@ -21,26 +21,6 @@ class Events:
         self.admin = admin
         self.quit_message = []
 
-    """Does all the work for the urban dictionary module, more tweaks to this will be coming next"""
-    """def urbdict(self, irc_text):
-        try:
-            define_word = irc_text.split('.ud ',1)[1].split()
-            if define_word == []:
-                raise IndexError
-            else:
-                joined_search = " ".join(define_word)
-                ds.url_modifier(joined_search)
-                ds.parse_soup(ds.full_link)
-                ds.html2text_convert(ds.string_definition)
-                if len(ds.converted_text) > 439:
-                    self.event_output = "Definition too long for IRC. Here is a link: {}".format(ds.full_link)
-                else:
-                    self.event_output = ds.converted_text
-        except (IndexError):
-            self.event_output = "you need to enter .ud [search term] to make this work...scub"
-        except(UnicodeEncodeError):
-            self.event_output = "Get that unicode shit out of here!"
-"""
     """Simply sends the quit command to mechbot with a random quit message"""
     def bot_quit(self):
         if self.name == self.admin:
