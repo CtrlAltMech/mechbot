@@ -8,7 +8,7 @@ import random
 import yaml
 
 def main():
-    """ Gathers all data from yaml config file and places it into a variable """
+    """ Gathers all data from yaml config file and places it into variables """
     with open ('bot_config.yaml') as server_info:
         config = yaml.load(server_info, Loader=yaml.FullLoader)
         server = config['Server'][0]

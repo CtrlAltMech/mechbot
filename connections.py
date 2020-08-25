@@ -7,8 +7,6 @@ from time import sleep
 
 class Connections:
 
-    irc = socket.socket()
-
     """Takes all the basic information for your bot and initializes it"""
     def __init__(self, server, channel, botnick, port):
         self.irc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -28,12 +26,11 @@ class Connections:
             print(self.ircmsg)
             if self.ircmsg.find("PING :") != -1:
                 code_split = self.ircmsg.split()[1]
-                print(code_split)
                 print("PONG "+code_split+" You don't have to yell!")
                 self.irc.send(bytes("PONG "+code_split+"\r\n", "UTF-8"))
                 break
             else:
-                pass
+                pass 
         sleep(1)
         self.irc.send(bytes("USER "+self.botnick+" "+self.botnick+" "+self.botnick+" :"+self.botnick+"\r\n","UTF-8"))
 
@@ -49,10 +46,9 @@ class Connections:
     """This gets called anytime the server sends out a ping message so the bot stays connected"""
     def ping_pong(self, code):
         code_split = code.split()[1]
-        print(code_split)
         print("PONG "+code_split+" Listening....")
         self.irc.send(bytes("PONG " + code_split + "\r\n", "UTF-8"))
 
     """Basic function to send text to the IRC channel chosen or send messages to IRC console"""
     def sendmsg(self, msg, channel):
-        self.irc.send(bytes("PRIVMSG "+channel+" :"+msg+"\n", "UTF-8"))
+        self.irc.send(bytes("PRIVMSG "+channel+" :"+msg+"\n", "UTF-8")) #TODO put this out into the event worker which should handle printing
