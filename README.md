@@ -1,3 +1,5 @@
+# Not currently being developed as of August 2023
+
 # mechbot version 2
 
 # About
